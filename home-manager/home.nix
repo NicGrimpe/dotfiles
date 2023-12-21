@@ -2,9 +2,9 @@
   config, 
   pkgs,
   ...
-}: let
-  user = "nic";
-in {
+}:
+
+{
   home = {
     stateVersion = "23.05";
 
@@ -91,5 +91,9 @@ in {
       nvim-tree-lua
       nvim-dap
     ];
+  };
+
+  programs.home-manager = {
+    enable = true;
   };
 }
